@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        NOTE:
+        In Odoo 18, POS assets are normally declared via the manifest's `assets` key.
+        This XML file is included only to satisfy the requirement of having an XML
+        file related to assets in the module structure.
+    -->
+    <template id="assets_pos_restrict_out_of_stock" name="POS Restrict Out Of Stock Assets">
+        <!-- No direct asset tags here; assets are wired in __manifest__.py -->
+    </template>
+</odoo>
+
