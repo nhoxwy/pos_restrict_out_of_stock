@@ -76,7 +76,7 @@ patch(PaymentScreen.prototype, {
                 const lines = violations.map(
                     (v) =>
                         _t(
-                            '"%s": ordered %s, available %s',
+                            '"%s": yêu cầu %s, tồn kho %s',
                             v.name,
                             v.ordered,
                             v.available

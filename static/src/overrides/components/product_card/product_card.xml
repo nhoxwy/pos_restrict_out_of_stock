@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="point_of_sale.ProductCard" t-inherit="point_of_sale.ProductCard" t-inherit-mode="extension">
+        <!-- Add out of stock badge on product thumbnail -->
+        <xpath expr="//article" position="inside">
+            <t t-if="props.product and (props.product.type === 'product' or props.product.is_storable)">
+                <t t-set="available" t-value="props.product.pos_available_qty ?? props.product.raw?.pos_available_qty ?? null"/>
+                <div t-if="available !== null and available lte 0" class="out-of-stock-badge">
+                    <span class="badge">Hết hàng</span>
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+</templates>
